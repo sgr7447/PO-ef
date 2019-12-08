@@ -36,8 +36,8 @@ public class Book extends Work implements Serializable {
     }
 
     @Override
-    public boolean searchForWork(Work work, String keyWord){
+    public boolean searchForWork(String keyWord){
         SearchStrategy _search = new SearchStrategy(new SearchBook());
-        return _search.performSearch(work, keyWord);
+        return _search.performSearch(this , keyWord);
     }
 }

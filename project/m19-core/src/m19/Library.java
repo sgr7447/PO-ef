@@ -319,37 +319,36 @@ public class Library implements Serializable {
         }
         else throw new WorkNotBorrowedException(workID, userID);
     }
-    /*
+/*
     public LinkedList<String> searchResults(String keyword){
             LinkedList<String> searchResults = new LinkedList<String>();
             for (Work w: _worksMap.values()){
                 if (w instanceof Book){
                     SearchStrategy searchBooks = new SearchStrategy(new SearchBook());
-                    Work work =searchBooks.performSearch(w, keyword);
-                    if ( work != null){
-                        searchResults.add(work.toString());
+                    if (searchBooks.performSearch(w, keyword)){
+                        searchResults.add(w.toString());
                     }
                 }
                 else if (w instanceof DVD){
                     SearchStrategy searchDVDs = new SearchStrategy(new SearchDVD());
-                    Work work = searchDVDs.performSearch(w, keyword);
-                    if ( work != null){
-                        searchResults.add(work.toString());
+                    if ( searchDVDs.performSearch(w, keyword)){
+                        searchResults.add(w.toString());
                     }
                 }
 
             }
             return searchResults;
         }
-    public LinkedList searchResults(Work work, String keyword){
-        LinkedList<Work> _searchResults = new LinkedList<Work>();
+        */
+    public LinkedList<String> searchResults(String keyword){
+        LinkedList<String> _searchResults = new LinkedList<String>();
         for (Work w: _worksMap.values()){
-            if (work.searchForWork(work, keyword)){
-                _searchResults.add(work);
+            if (w.searchForWork(keyword)){
+                _searchResults.add(w.toString());
             }
         }
         return _searchResults;
-    }*/
+    }
 
 /**
 * Receives 2 users, compares 2 their names and IDs and orders theis names alphabetically (case

@@ -23,12 +23,12 @@ public class DoPerformSearch extends Command<LibraryManager> {
   /** @see pt.tecnico.po.ui.Command#execute() */
   @Override
   public final void execute() {
-      /*_form.parse();
+      _form.parse();
       for (String s: _receiver.searchResults(_keyword.value())) {
           _display.addLine(s);
       }
       _display.display();
-*/
+
   }
 
 }
