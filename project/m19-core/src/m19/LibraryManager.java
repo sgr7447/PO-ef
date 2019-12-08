@@ -179,7 +179,7 @@ public class LibraryManager {
         _library.returnWork(userID, workID);
     }
 
-/*    public LinkedList<Work> searchResults(Work work, String keyword){
-        return _library.searchResults(work, keyword);
-    }*/
+    public LinkedList<String> searchResults(String keyword){
+        return _library.searchResults(keyword);
+    }
 }

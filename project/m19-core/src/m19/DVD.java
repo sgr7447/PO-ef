@@ -36,8 +36,8 @@ public class DVD extends Work implements Comparable<Work>, Serializable {
     }
 
     @Override
-    public boolean searchForWork(Work work, String keyWord){
+    public boolean searchForWork(String keyWord){
         SearchStrategy _search = new SearchStrategy(new SearchDVD());
-        return _search.performSearch(work, keyWord);
+        return _search.performSearch(this, keyWord);
     }
 }

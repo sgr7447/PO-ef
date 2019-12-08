@@ -80,7 +80,7 @@ public abstract class Work implements Comparable<Work>, Serializable {
         return true;
     }
 
-    public abstract boolean searchForWork(Work work, String keyWord);
+    public abstract boolean searchForWork(String keyWord);
 
     @Override
     public boolean equals(Object other){
