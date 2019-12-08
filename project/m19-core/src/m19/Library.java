@@ -319,27 +319,7 @@ public class Library implements Serializable {
         }
         else throw new WorkNotBorrowedException(workID, userID);
     }
-/*
-    public LinkedList<String> searchResults(String keyword){
-            LinkedList<String> searchResults = new LinkedList<String>();
-            for (Work w: _worksMap.values()){
-                if (w instanceof Book){
-                    SearchStrategy searchBooks = new SearchStrategy(new SearchBook());
-                    if (searchBooks.performSearch(w, keyword)){
-                        searchResults.add(w.toString());
-                    }
-                }
-                else if (w instanceof DVD){
-                    SearchStrategy searchDVDs = new SearchStrategy(new SearchDVD());
-                    if ( searchDVDs.performSearch(w, keyword)){
-                        searchResults.add(w.toString());
-                    }
-                }
 
-            }
-            return searchResults;
-        }
-        */
     public LinkedList<String> searchResults(String keyword){
         LinkedList<String> _searchResults = new LinkedList<String>();
         for (Work w: _worksMap.values()){

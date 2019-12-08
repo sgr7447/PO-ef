@@ -40,10 +40,6 @@ public class User implements Serializable {
         return _name;
     }
 
-    // public String getEmail(){
-    //     return _email;
-    // }
-
     public int getUserID(){
         return _userID;
     }
@@ -56,32 +52,28 @@ public class User implements Serializable {
         return _status;
     }
 
-    public boolean workRequested(Work work){
-        return _requestsMap.containsKey(work);
-    }
-
-    public void setNumCurrentRequisitions(){
-        _numCurrentRequisitions = _requestsMap.size();
-    }
-
     public int getNumCurrentRequisitions(){
         return _numCurrentRequisitions;
-    }
-
-    public Requisition getRequisition(Work work){
-        return _requestsMap.get(work);
     }
 
     public int getFineValue(){
         return _fineValue;
     }
 
-    public void setFineValue(int fine){
-        _fineValue += fine;
-    }
-
     public ArrayList<Notification> getNotificationsArray(){
         return _notificationsArray;
+    }
+
+    public boolean workRequested(Work work){
+        return _requestsMap.containsKey(work);
+    }
+
+    public Requisition getRequisition(Work work){
+        return _requestsMap.get(work);
+    }
+
+    public void setFineValue(int fine){
+        _fineValue += fine;
     }
 
     public void addNotification(Notification notification){
@@ -126,6 +118,7 @@ public class User implements Serializable {
 
     public void addRequisition(Work work, Requisition requisition){
         _requestsMap.put(work, requisition);
+        _numCurrentRequisitions++;
     }
 
     public void removeRequisition(Work work, int date) {
@@ -136,6 +129,7 @@ public class User implements Serializable {
             setCountOnTimeDeliveries();
         }
         _requestsMap.remove(work);
+        _numCurrentRequisitions--;
     }
 
     public int calculateFine(Work work, int date){
@@ -178,7 +172,6 @@ public class User implements Serializable {
             return false;
         }
     }
-
 
     @Override
     public String toString(){
