@@ -4,7 +4,6 @@ import pt.tecnico.po.ui.Command;
 import pt.tecnico.po.ui.DialogException;
 import pt.tecnico.po.ui.Input;
 import m19.LibraryManager;
-import m19.User;
 import m19.exceptions.NoUserException;
 import m19.app.exceptions.NoSuchUserException;
 
@@ -27,8 +26,7 @@ public class DoShowUser extends Command<LibraryManager> {
   public final void execute() throws DialogException{
       _form.parse();
       try{
-          User user = _receiver.getUser(_userID.value());
-          _display.popup(user.toString());
+          _display.popup(_receiver.getUser(_userID.value()).toString());
       }
       catch (NoUserException e){
           throw new NoSuchUserException(_userID.value());

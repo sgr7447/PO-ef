@@ -4,7 +4,6 @@ import pt.tecnico.po.ui.Command;
 import pt.tecnico.po.ui.DialogException;
 import pt.tecnico.po.ui.Input;
 import m19.LibraryManager;
-import m19.Work;
 import m19.exceptions.NoWorkException;
 import m19.app.exceptions.NoSuchWorkException;
 
@@ -27,8 +26,7 @@ public class DoDisplayWork extends Command<LibraryManager> {
   public final void execute() throws DialogException {
       _form.parse();
       try{
-          Work w = _receiver.getWork(_workID.value());
-          _display.popup(w.toString());
+          _display.popup(_receiver.getWork(_workID.value()).toString());
       }
       catch (NoWorkException e){
           throw new NoSuchWorkException(_workID.value());

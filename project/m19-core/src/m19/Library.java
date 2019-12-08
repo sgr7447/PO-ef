@@ -176,11 +176,15 @@ public class Library implements Serializable {
 * returns a LinkedList with all the users
 */
 
-    public LinkedList<User> showAllUsers(){
+    public LinkedList<String> showAllUsers(){
         LinkedList<User> lstUsers = new LinkedList<User>();
         lstUsers.addAll(_usersMap.values());
         Collections.sort(lstUsers, new UserComparator());
-        return lstUsers;
+        LinkedList<String> lstOrderedUsers = new LinkedList<String>();
+        for (User u: lstUsers){
+            lstOrderedUsers.add(u.toString());
+        }
+        return lstOrderedUsers;
     }
 
 /**
@@ -230,9 +234,13 @@ public class Library implements Serializable {
 * returns a LinkedList with all the works
 */
 
-    public LinkedList<Work> showAllWorks(){
-        LinkedList<Work> lstWorks = new LinkedList<Work>();
-        lstWorks.addAll(_worksMap.values());
+    public LinkedList<String> showAllWorks(){
+        LinkedList<Work> lst = new LinkedList<Work>();
+        lst.addAll(_worksMap.values());
+        LinkedList<String> lstWorks = new LinkedList<String>();
+        for (Work w: lst){
+            lstWorks.add(w.toString());
+        }
         return lstWorks;
     }
 
@@ -319,27 +327,7 @@ public class Library implements Serializable {
         }
         else throw new WorkNotBorrowedException(workID, userID);
     }
-/*
-    public LinkedList<String> searchResults(String keyword){
-            LinkedList<String> searchResults = new LinkedList<String>();
-            for (Work w: _worksMap.values()){
-                if (w instanceof Book){
-                    SearchStrategy searchBooks = new SearchStrategy(new SearchBook());
-                    if (searchBooks.performSearch(w, keyword)){
-                        searchResults.add(w.toString());
-                    }
-                }
-                else if (w instanceof DVD){
-                    SearchStrategy searchDVDs = new SearchStrategy(new SearchDVD());
-                    if ( searchDVDs.performSearch(w, keyword)){
-                        searchResults.add(w.toString());
-                    }
-                }
 
-            }
-            return searchResults;
-        }
-        */
     public LinkedList<String> searchResults(String keyword){
         LinkedList<String> _searchResults = new LinkedList<String>();
         for (Work w: _worksMap.values()){

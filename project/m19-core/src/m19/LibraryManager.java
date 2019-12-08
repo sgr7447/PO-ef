@@ -134,7 +134,7 @@ public class LibraryManager {
         _library.addUserToWaitList(workID, userID);
     }
 
-    public LinkedList<User> showAllUsers(){
+    public LinkedList<String> showAllUsers(){
         return _library.showAllUsers();
     }
 
@@ -142,7 +142,7 @@ public class LibraryManager {
         return _library.getWork(workID);
     }
 
-    public LinkedList<Work> showAllWorks (){
+    public LinkedList<String> showAllWorks (){
         return _library.showAllWorks();
     }
 
