@@ -92,10 +92,6 @@ public class User implements Serializable {
         _notificationsArray.clear();
     }
 
-    public void addToFineValue(){
-        _fineValue = _fineValue + 5;
-    }
-
     public void payFine(){
         _fineValue = 0;
     }

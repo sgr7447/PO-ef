@@ -161,6 +161,10 @@ public class LibraryManager {
         _library.payFineOfWork(userID);
     }
 
+    public int getTotalFine(int userID, int fine) throws NoUserException{
+        return _library.getTotalFine(userID, fine);
+    }
+
     public int calculateFine(int userID, int workID) throws NoUserException, NoWorkException{
         return _library.calculateFine(userID, workID);
     }

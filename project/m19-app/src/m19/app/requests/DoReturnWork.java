@@ -20,6 +20,7 @@ public class DoReturnWork extends Command<LibraryManager> {
     private Input<Integer> _userID;
     private Input<Integer> _workID;
     private int fine;
+    private int fullFine;
 
   /**
    * @param receiver
@@ -42,7 +43,8 @@ public class DoReturnWork extends Command<LibraryManager> {
             _receiver.returnWork(_userID.value(), _workID.value());
 
             if (fine>0){
-                _display.popup(Message.showFine(_userID.value(), fine));
+                fullFine = _receiver.getTotalFine(_userID.value(), fine);
+                _display.popup(Message.showFine(_userID.value(), fullFine));
 
                 _form.clear();
                 Input<String> payFine = _form.addStringInput(Message.requestFinePaymentChoice());

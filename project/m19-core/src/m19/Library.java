@@ -302,6 +302,11 @@ public class Library implements Serializable {
         }
     }
 
+    public int getTotalFine(int userID, int fine) throws NoUserException{
+        User user = getUser(userID);
+        return (fine + user.getFineValue());
+    }
+
     public void returnWork(int userID, int workID) throws NoWorkException, NoUserException, WorkNotBorrowedException{
         User user = getUser (userID);
         Work work = getWork (workID);
