@@ -44,7 +44,7 @@ public abstract class Work implements Comparable<Work>, Serializable {
     }
 
     public void setNumAvailableWorks(int n){
-        _numAvailableWorks+=n;
+        _numAvailableWorks += n;
     }
 
     public int getNumAvailableWorks(){
