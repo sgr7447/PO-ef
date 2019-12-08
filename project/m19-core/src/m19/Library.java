@@ -277,6 +277,7 @@ public class Library implements Serializable {
     public void addFine(int userID, int fine) throws NoUserException{
         User user = getUser(userID);
         user.setFineValue(fine);
+        verifyUser(user);
     }
 
     public void verifyUsers(){
