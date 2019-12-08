@@ -40,9 +40,9 @@ public class User implements Serializable {
         return _name;
     }
 
-    public String getEmail(){
-        return _email;
-    }
+    // public String getEmail(){
+    //     return _email;
+    // }
 
     public int getUserID(){
         return _userID;
@@ -86,10 +86,6 @@ public class User implements Serializable {
 
     public void addNotification(Notification notification){
         _notificationsArray.add(notification);
-    }
-
-    public void removeNotifications(){
-        _notificationsArray.clear();
     }
 
     public void payFine(){
