@@ -60,10 +60,10 @@ public class User implements Serializable {
         return _fineValue;
     }
 
-    public ArrayList<Notification> getNotificationsArray()
+    public ArrayList<Notification> getNotificationsArray(){
         ArrayList<Notification> copy = new ArrayList<Notification>();
         copy.addAll(_notificationsArray);
-        _notificationsArray.clear();{
+        _notificationsArray.clear();
         return copy;
     }
 
