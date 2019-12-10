@@ -28,8 +28,8 @@ public class VerifyAllRules implements Serializable {
     }
 
     public boolean AllRulesVerified() throws MissedRuleException{
-        return (_noAvailableWorksRule.applyRule() && _numberRequestsExceededRule.applyRule()
-            && _overPriceLimitRule.applyRule() && _referenceWorkRule.applyRule()
-            && _requestSameWorkTwiceRule.applyRule() && _suspendedUserRule.applyRule());
+        return (_requestSameWorkTwiceRule.applyRule() && _suspendedUserRule.applyRule()
+                && _noAvailableWorksRule.applyRule() && _numberRequestsExceededRule.applyRule()
+                && _referenceWorkRule.applyRule() && _overPriceLimitRule.applyRule());
     }
 }

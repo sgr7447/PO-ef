@@ -1,0 +1,19 @@
+*** tests/A-13-03-M-ok.out	2019-09-17 11:08:57.000000000 +0100
+--- tests/A-13-03-M-ok.outhyp	2019-12-10 16:15:54.000000000 +0000
+***************
+*** 78,84 ****
+  4 - Mostrar notificações de utente
+  5 - Saldar multa de utente
+  0 - Sair
+! Escolha uma opção: Introduza o número de utente: 2 - Rey - real.last.jedi@universe.com - NORMAL - ACTIVO
+  Menu de Gestão de Utentes
+  1 - Registar utente
+  2 - Mostrar utente
+--- 78,84 ----
+  4 - Mostrar notificações de utente
+  5 - Saldar multa de utente
+  0 - Sair
+! Escolha uma opção: Introduza o número de utente: 2 - Rey - real.last.jedi@universe.com - NORMAL - SUSPENSO - EUR 110
+  Menu de Gestão de Utentes
+  1 - Registar utente
+  2 - Mostrar utente

@@ -11,11 +11,8 @@ public class SearchBook implements Search, Serializable{
         if(work instanceof Book){
             Book book = (Book) work;
             keyWord = keyWord.toLowerCase();
-            if (book.getName().toLowerCase().contains(keyWord) ||
-                book.getAuthor().toLowerCase().contains(keyWord)){
-                    return true;}
-
-            else return false;
+            return (book.getName().toLowerCase().contains(keyWord) ||
+                    book.getAuthor().toLowerCase().contains(keyWord));
         }
         else return false;
 }

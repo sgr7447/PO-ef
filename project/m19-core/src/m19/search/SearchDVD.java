@@ -11,11 +11,8 @@ public class SearchDVD implements Search, Serializable{
         if(work instanceof DVD){
             DVD dvd = (DVD) work;
             keyWord = keyWord.toLowerCase();
-            if (dvd.getName().toLowerCase().contains(keyWord) ||
-                dvd.getDirector().toLowerCase().contains(keyWord)){
-                    return true;}
-
-            else return false;
+            return (dvd.getName().toLowerCase().contains(keyWord) ||
+                    dvd.getDirector().toLowerCase().contains(keyWord));
         }
         else return false;
 
