@@ -60,8 +60,11 @@ public class User implements Serializable {
         return _fineValue;
     }
 
-    public ArrayList<Notification> getNotificationsArray(){
-        return _notificationsArray;
+    public ArrayList<Notification> getNotificationsArray()
+        ArrayList<Notification> copy = new ArrayList<Notification>();
+        copy.addAll(_notificationsArray);
+        _notificationsArray.clear();{
+        return copy;
     }
 
     public boolean workRequested(Work work){
