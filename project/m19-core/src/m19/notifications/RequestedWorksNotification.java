@@ -6,15 +6,15 @@ import java.util.ArrayList;
 import java.io.Serializable;
 
 public class RequestedWorksNotification implements Notification, Serializable{
-    private Work _work;
+    private String _work;
 
-    public RequestedWorksNotification(Work work){
+    public RequestedWorksNotification(String work){
         _work = work;
     }
 
     @Override
     public String toString(){
-        return "REQUISIÇÃO: "+ _work.toString();
+        return "REQUISIÇÃO: "+ _work;
     }
 
 }

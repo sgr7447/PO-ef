@@ -5,14 +5,14 @@ import m19.Work;
 import java.io.Serializable;
 
 public class ReturnedWorksNotification implements Notification, Serializable{
-    private Work _work;
+    private String _work;
 
-    public ReturnedWorksNotification(Work work){
+    public ReturnedWorksNotification(String work){
         _work = work;
     }
 
     @Override
     public String toString(){
-        return "ENTREGA: "+ _work.toString();
+        return "ENTREGA: "+ _work;
     }
 }

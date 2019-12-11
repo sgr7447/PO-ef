@@ -253,7 +253,7 @@ public class Library implements Serializable {
             Requisition requisition = new Requisition(deadline, userID, workID);
             user.addRequisition(work, requisition);
             work.setNumAvailableWorks(-1);
-            work.addNotification(new RequestedWorksNotification(work));
+            //work.addNotification(new RequestedWorksNotification(work));
         }
         return deadline;
     }
@@ -322,7 +322,8 @@ public class Library implements Serializable {
             user.removeRequisition(work, _date);
             work.setNumAvailableWorks(1);
             verifyUser(user);
-            work.addNotification(new ReturnedWorksNotification(work));
+            Notification n = new ReturnedWorksNotification(work.toString());
+            work.addNotification(n);
 
         }
         else throw new WorkNotBorrowedException(workID, userID);

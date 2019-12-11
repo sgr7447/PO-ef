@@ -6,8 +6,8 @@ public enum Category implements Serializable {
     FICTION (true, "Ficção"),
     SCITECH (true, "Técnica e Científica"),
     REFERENCE (false, "Referência");
-    public boolean _ableToOrder;
-    public String _string;
+    private boolean _ableToOrder;
+    private String _string;
 
     Category(boolean ableToOrder, String string){
       _ableToOrder = ableToOrder;
@@ -17,7 +17,7 @@ public enum Category implements Serializable {
     public boolean getAbleToOrder(){
       return _ableToOrder;
     }
-    
+
     public String getString(){
       return _string;
     }
