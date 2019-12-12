@@ -88,8 +88,13 @@ public class User implements Serializable {
     }
 
     public void setCountOnTimeDeliveries(){
-        _countOnTimeDeliveries++;
-        _countLateDeliveries = 0;
+        if (_countLateDeliveries >= 3 && _countOnTimeDeliveries < 3){
+            _countOnTimeDeliveries++;
+        }
+        else{
+            _countOnTimeDeliveries++;
+            _countLateDeliveries = 0;
+        }
     }
 
     public void setCountLateDelieveries(){

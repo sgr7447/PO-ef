@@ -1,0 +1,38 @@
+*** tests/A-09-06-M-ok.out	2019-12-12 10:19:22.000000000 +0000
+--- tests/A-09-06-M-ok.outhyp	2019-12-12 10:48:50.000000000 +0000
+***************
+*** 122,128 ****
+  4 - Mostrar notificações de utente
+  5 - Saldar multa de utente
+  0 - Sair
+! Escolha uma opção: Introduza o número de utente: ENTREGA: 0 - 1 de  2 - Livro - A arte de sobreviver no 36 - 20 - Ficção - Joao Fonseca - 1234567892
+  Menu de Gestão de Utentes
+  1 - Registar utente
+  2 - Mostrar utente
+--- 122,129 ----
+  4 - Mostrar notificações de utente
+  5 - Saldar multa de utente
+  0 - Sair
+! Escolha uma opção: Introduza o número de utente: ENTREGA: 7 - 1 de 1 - DVD - The rise of Skywalker - 20 - Técnica e Científica - J. J. Abrams - 200505551
+! ENTREGA: 0 - 1 de 2 - Livro - A arte de sobreviver no 36 - 20 - Ficção - Joao Fonseca - 1234567892
+  Menu de Gestão de Utentes
+  1 - Registar utente
+  2 - Mostrar utente
+***************
+*** 163,169 ****
+  4 - Mostrar notificações de utente
+  5 - Saldar multa de utente
+  0 - Sair
+! Escolha uma opção: Introduza o número de utente: Menu de Gestão de Utentes
+  1 - Registar utente
+  2 - Mostrar utente
+  3 - Listar utentes
+--- 164,171 ----
+  4 - Mostrar notificações de utente
+  5 - Saldar multa de utente
+  0 - Sair
+! Escolha uma opção: Introduza o número de utente: ENTREGA: 0 - 2 de 2 - Livro - A arte de sobreviver no 36 - 20 - Ficção - Joao Fonseca - 1234567892
+! Menu de Gestão de Utentes
+  1 - Registar utente
+  2 - Mostrar utente
+  3 - Listar utentes

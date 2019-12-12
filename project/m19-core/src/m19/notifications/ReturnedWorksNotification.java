@@ -7,8 +7,8 @@ import java.io.Serializable;
 public class ReturnedWorksNotification implements Notification, Serializable{
     private String _work;
 
-    public ReturnedWorksNotification(String work){
-        _work = work;
+    public ReturnedWorksNotification(Work work){
+        _work = work.toString();
     }
 
     @Override

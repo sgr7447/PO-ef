@@ -8,8 +8,8 @@ import java.io.Serializable;
 public class RequestedWorksNotification implements Notification, Serializable{
     private String _work;
 
-    public RequestedWorksNotification(String work){
-        _work = work;
+    public RequestedWorksNotification(Work work){
+        _work = work.toString();
     }
 
     @Override

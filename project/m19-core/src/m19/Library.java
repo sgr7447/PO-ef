@@ -322,8 +322,8 @@ public class Library implements Serializable {
             user.removeRequisition(work, _date);
             work.setNumAvailableWorks(1);
             verifyUser(user);
-            Notification n = new ReturnedWorksNotification(work.toString());
-            work.addNotification(n);
+            //Notification n = new ReturnedWorksNotification(work);
+            work.addNotification(new ReturnedWorksNotification(work));
 
         }
         else throw new WorkNotBorrowedException(workID, userID);
